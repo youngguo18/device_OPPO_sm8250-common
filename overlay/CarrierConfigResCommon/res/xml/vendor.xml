@@ -2347,5 +2347,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <item value="7,8,12" />
         <item value="3,11,9,10,15" />
         </string-array>
+        <int-array name="carrier_nr_availabilities_int_array" num="1">
+        <item value="2" />
+        </int-array>
     </carrier_config>
 </carrier_config_list>
