@@ -272,6 +272,9 @@ PRODUCT_PACKAGES += \
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.oplus
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
 
 # LiveDisplay
 PRODUCT_PACKAGES += \

@@ -96,6 +96,10 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # Fingerprint
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 
+# Health
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/devices/virtual/oplus_chg/battery/mmi_charging_enable
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # HIDL
 TARGET_USES_CUSTOM_C2_MANIFEST := true
 
