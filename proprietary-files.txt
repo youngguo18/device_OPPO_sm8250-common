@@ -774,6 +774,7 @@ odm/lib64/sensors.hal.tof.so
 odm/lib64/vendor.oplus.hardware.cameraextension@1.0-service-impl.so
 odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 odm/lib64/vendor.oplus.hardware.orms@1.0.so
+odm/lib64/libOPAlgoCamFaceBeautyCap.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libextcamera_client.so
 vendor/lib/libgui1_vendor.so
