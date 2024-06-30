@@ -123,6 +123,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera_metadata_shim \
+    libutilscallstack.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -395,8 +396,11 @@ PRODUCT_PACKAGES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
+    libcurl.vendor \
+    libjsoncpp.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
+    libsqlite.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
@@ -509,6 +513,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
 
+# Required for QPR3
+PRODUCT_PACKAGES += \
+    libdumpstateutil.vendor
+
 # VNDK
 PRODUCT_PACKAGES += \
     vndservicemanager
@@ -554,6 +562,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libnl \
+    libpng.vendor \
     libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
