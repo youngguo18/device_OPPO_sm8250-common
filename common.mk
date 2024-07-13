@@ -575,3 +575,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
+
+# Testing to correct brightness
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.brightness.low.gamma=true
