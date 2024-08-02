@@ -20,6 +20,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Inherit proprietary libraries
 $(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # ANT
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
@@ -567,3 +570,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    firmware_WCNSS_qcom_cfg.ini_qca6390_symlink \
+    firmware_wlanmdsp.otaupdate_symlink
+
+# Testing to correct brightness
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.brightness.low.gamma=true

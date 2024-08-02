@@ -1193,10 +1193,10 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
 # Graphics (Adreno)
 vendor/lib/egl/eglSubDriverAndroid.so|9f76906266649d5c8bb98c693c9dbfa87e06d720
-vendor/lib/egl/libEGL_adreno.so|db87040c6e2d2f2f27a5d308614e5b4c05e6af87
+vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so|db87040c6e2d2f2f27a5d308614e5b4c05e6af87
 vendor/lib/egl/libGLESv1_CM_adreno.so|1d7f7b8bc6b177cd7eb3205212f7d20fa6db04a4
-vendor/lib/egl/libGLESv2_adreno.so|e23ea92d3211dc305f15ee2a29322d89b9cf809e
-vendor/lib/egl/libq3dtools_adreno.so|323e297790439794d50c0a2901e5129de2bdef4e
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so|e23ea92d3211dc305f15ee2a29322d89b9cf809e
+vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so|323e297790439794d50c0a2901e5129de2bdef4e
 vendor/lib/egl/libq3dtools_esx.so|b03933ca6a7688b06a77d4480548dc385f213471
 vendor/lib/libC2D2.so|909c06c3f780da8ea77e8bd0e328e444db19aefd
 vendor/lib/libCB.so
@@ -1211,10 +1211,10 @@ vendor/lib/libllvm-glnext.so|f415ddcf44ec707cf719f173defb2cf942f20e20
 vendor/lib/libllvm-qcom.so
 vendor/lib/libllvm-qgl.so|3280465e577f6fd56c3794f54481c9132524ca2d
 vendor/lib64/egl/eglSubDriverAndroid.so|0acaba7a64fb3522af5119bcdf50c12bda8e3d11
-vendor/lib64/egl/libEGL_adreno.so|35ef25896bf15199e4ee3ef928dfd4698d7f7897
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|35ef25896bf15199e4ee3ef928dfd4698d7f7897
 vendor/lib64/egl/libGLESv1_CM_adreno.so|d02fd3da6d3135f4aeccabb2a861e11650e7d8e9
-vendor/lib64/egl/libGLESv2_adreno.so|b19203984eb4bf9e25d10f78c0e7bd6e3b736941
-vendor/lib64/egl/libq3dtools_adreno.so|2d698f5d23a324871f91f173418e1775948baf0c
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|b19203984eb4bf9e25d10f78c0e7bd6e3b736941
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|2d698f5d23a324871f91f173418e1775948baf0c
 vendor/lib64/egl/libq3dtools_esx.so|5c2801df7bfb539285829fa3d36f30396350fc6c
 vendor/lib64/libadreno_app_profiles.so|e40e50eda680458a6016b71f4c00ec8a891ae9cf
 vendor/lib64/libC2D2.so|f4f572f85fdd2dd741112060a8fdf49cb646a91d
@@ -1747,8 +1747,8 @@ system_ext/lib64/lib-imsvt.so|38b39cafe351be5abc7b6ae5055ea1f390032502
 system_ext/lib64/lib-imsvtextutils.so|16bed08e80919635fcb7ace934bd5f16f059c182
 system_ext/lib64/lib-imsvtutils.so|9e45b76b14600df92782e6c8213af0dcddbe80be
 system_ext/lib64/libdiag_system.so|35bace09ba74af348b9530fb02cf7088c90a44fd
-system_ext/lib64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
-system_ext/lib64/libimsmedia_jni.so|9f192af40439abb04d5d5f0f3de5b772c9381114
+system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|ff3d65093f5bf19fba95798b0a121ee510b0f72e
+system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|9f192af40439abb04d5d5f0f3de5b772c9381114
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|0c11ff5a7a671073ee40e17d46aa8b7acbf1dc0a
 system_ext/priv-app/ims/ims.apk|f0d834acbc77e7830459e0246f5073e1b9ba8657
 
