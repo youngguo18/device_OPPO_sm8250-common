@@ -8,94 +8,40 @@
 
 #include "vendor_init.h"
 
-static const variant_info_t RMX2071_CN_info = {
-    .prjversion_value = "19795",
+static const variant_info_t PENM00_CN_info = {
+    .prjversion_value = "20161",
 
-    .device = "RMX2071CN",
-    .model = "RMX2071",
-    .name = "RMX2071",
+    .device = "OP4EC1",
+    .model = "PENM00",
+    .name = "OPPO Reno6 Pro+ 5G",
 
-    .sku = "bladerunner",
+    .sku = "OP4EC1",
 };
 
-static const variant_info_t RMX2072_CN_info = {
-    .prjversion_value = "20607",
+static const variant_info_t PENM00_CNLZ_info = {
+    .prjversion_value = "20135",
 
-    .device = "RMX2072CN",
-    .model = "RMX2072",
-    .name = "RMX2072",
+    .device = "OP4EA7",
+    .model = "PDRM00",
+    .name = "OPPO Reno5 Pro+ 5G",
 
-    .sku = "bladerunner_48m",
+    .sku = "OP4EC1",
 };
 
-static const variant_info_t RMX2075_GLOBAL_info = {
-    .prjversion_value = "19705",
+static const variant_info_t PENM00_GLOBAL_info = {
+    .prjversion_value = "20351",
 
-    .device = "RMX2075L1",
-    .model = "RMX2075",
-    .name = "RMX2075",
+    .device = "OP4F7FL1",
+    .model = "CPH2247",
+    .name = "OPPO Reno6 Pro 5G",
 
-    .sku = "bladerunner",
-};
-
-static const variant_info_t RMX2076_IN_info = {
-    .prjversion_value = "19706",
-
-    .device = "RMX2076L1",
-    .model = "RMX2076",
-    .name = "RMX2076",
-
-    .sku = "bladerunner",
-};
-
-static const variant_info_t RMX3370_CN_info = {
-    .prjversion_value = "21619",
-
-    .device = "RE5473",
-    .model = "RMX3370",
-    .name = "RMX3370",
-
-    .sku = "bitra",
-};
-
-static const variant_info_t RMX3370_CNLZ_info = {
-    .prjversion_value = "136730",
-
-    .device = "RE5473",
-    .model = "RMX3370",
-    .name = "RMX3370",
-
-    .sku = "bitra",
-};
-
-static const variant_info_t RMX3370_GLOBAL_info = {
-    .prjversion_value = "136859",
-
-    .device = "RE879AL1",
-    .model = "RMX3370",
-    .name = "RMX3370",
-
-    .sku = "bitra",
-};
-
-static const variant_info_t RMX3370_IN_info = {
-    .prjversion_value = "136858",
-
-    .device = "RE879AL1",
-    .model = "RMX3370",
-    .name = "RMX3370",
-
-    .sku = "bitra",
+    .sku = "OP4EC1",
 };
 
 static const std::vector<variant_info_t> variants = {
-    RMX2071_CN_info,
-    RMX2075_GLOBAL_info,
-    RMX2076_IN_info,
-    RMX3370_CN_info,
-    RMX3370_CNLZ_info,
-    RMX3370_GLOBAL_info,
-    RMX3370_IN_info,
+    PENM00_CN_info,
+    PENM00_CNLZ_info,
+    PENM00_GLOBAL_info,
 };
 
 void vendor_load_properties() {

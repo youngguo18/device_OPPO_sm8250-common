@@ -135,6 +135,7 @@ odm/lib/libozoaudiodecoder.so
 odm/lib/libozoaudioencoder.so
 odm/lib/libozoc2store.so
 odm/lib/soundfx/libozoprocessing.so
+odm/lib64/soundfx/libozoprocessing.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti

@@ -18,7 +18,7 @@
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Inherit proprietary libraries
-$(call inherit-product, vendor/realme/sm8250-common/sm8250-common-vendor.mk)
+$(call inherit-product, vendor/OPPO/sm8250-common/sm8250-common-vendor.mk)
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
@@ -448,7 +448,7 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    device/realme/sm8250-common \
+    device/OPPO/sm8250-common \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/oplus \

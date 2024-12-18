@@ -8,10 +8,8 @@
 prjname=`getprop ro.boot.prjname`
 
 # Radio
-if [ "$prjname" = "19706" ] || [ "$prjname" = "19795" ] || [ "$prjname" = "21619" ] || [ "$prjname" = "2161A" ] || [ "$prjname" = "2169A" ] || [ "$prjname" = "2169B" ]; then
+if grep -q simcardnum.doublesim=1 /proc/cmdline; then
     setprop vendor.radio.multisim.config dsds
-elif [ "$prjname" = "19705" ]; then
-    setprop vendor.radio.multisim.config ssss
 fi
 
 # Wifi
