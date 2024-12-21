@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012-2019, 2021 The Linux Foundation. All rights reserved.
+<!-- Copyright (C) 2012-2019 The Linux Foundation. All rights reserved.
      Not a contribution.
      Copyright (C) 2010 The Android Open Source Project
 
@@ -93,15 +93,7 @@
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
     <!-- Back Camera -->
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- Xiaopeng.Hu@PSW.MM.MediaServer.Record.1392160, 2018/05/28, -->
-<!-- Modify for avoiding video recording signal tone -->
-<!--
-    <CamcorderProfiles cameraId="0">
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-    <CamcorderProfiles cameraId="0" startOffsetMs="500">
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
+    <CamcorderProfiles cameraId="0" startOffsetMs="200">
 
     <EncoderProfile quality="low" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -121,12 +113,6 @@
              bitRate="50000000"
              width="3840"
              height="2160"
-             frameRate="30" />
-
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
              frameRate="30" />
 
       <Audio codec="aac"
@@ -200,11 +186,125 @@
              channels="2" />
     </EncoderProfile>
 
+    <!--khursheed.ali@imaging, 2020/03/19, HFR for Rear Main camera-->
+    <!-- VENDOR_EDIT add start -->
+    <EncoderProfile quality="highspeed720p" fileFormat="mp4" duration="30">
+       <Video codec="h264"
+              bitRate="12000000"
+              width="1280"
+              height="720"
+              frameRate="480" />
+
+       <Audio codec="aac"
+              bitRate="96000"
+              sampleRate="48000"
+              channels="2" />
+     </EncoderProfile>
+
+     <EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="30">
+       <Video codec="h264"
+              bitRate="12000000"
+              width="1280"
+              height="720"
+              frameRate="480" />
+
+       <Audio codec="aac"
+              bitRate="96000"
+              sampleRate="48000"
+              channels="2" />
+     </EncoderProfile>
+
+     <EncoderProfile quality="highspeed1080p" fileFormat="mp4" duration="30">
+       <Video codec="h264"
+              bitRate="42000000"
+              width="1920"
+              height="1080"
+              frameRate="240" />
+
+       <Audio codec="aac"
+              bitRate="96000"
+              sampleRate="48000"
+              channels="2" />
+     </EncoderProfile>
+
+     <EncoderProfile quality="highspeedhigh" fileFormat="mp4" duration="30">
+       <Video codec="h264"
+              bitRate="42000000"
+              width="1920"
+              height="1080"
+              frameRate="240" />
+
+       <Audio codec="aac"
+              bitRate="96000"
+              sampleRate="48000"
+              channels="2" />
+     </EncoderProfile>
+     <!-- VENDOR_EDIT add end -->
+
+    <!-- VENDOR_EDIT start -->
+    <!--
+    <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="29400000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+    -->
+    <!-- VENDOR_EDIT end -->
+
+    <!-- Shield 4k 4096*2160 video size,fixing cts meida failed -->
+    <!--
+    <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="57500000"
+            width="4096"
+            height="2160"
+            frameRate="24" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+    -->
+
     <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="50000000"
             width="3840"
             height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="8kuhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="105000000"
+            width="7680"
+            height="4320"
             frameRate="30" />
 
       <Audio codec="aac"
@@ -258,12 +358,6 @@
              bitRate="50000000"
              width="3840"
              height="2160"
-             frameRate="30" />
-
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
@@ -372,11 +466,65 @@
              channels="2" />
     </EncoderProfile>
 
+    <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="29400000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="57500000"
+            width="4096"
+            height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="50000000"
             width="3840"
             height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse8kuhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="105000000"
+            width="7680"
+            height="4320"
             frameRate="30" />
 
       <Audio codec="aac"
@@ -392,15 +540,7 @@
 
     </CamcorderProfiles>
     <!-- Front Camera -->
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- Xiaopeng.Hu@PSW.MM.MediaServer.Record.1392160, 2018/05/28, -->
-<!-- Modify for avoiding video recording signal tone -->
-<!--
-    <CamcorderProfiles cameraId="1">
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-    <CamcorderProfiles cameraId="1" startOffsetMs="500">
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
+    <CamcorderProfiles cameraId="1" startOffsetMs="200">
 
     <EncoderProfile quality="low" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -415,25 +555,22 @@
              channels="1" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- dashuang.zhang@PSW.MM.MediaServer.Cts.1356874, 2019/06/13, -->
-<!-- Modify for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
+      <!--khursheed.ali@imaging, 2020/04/20, Remove UHD profile for front camera-->
+      <!--VENDOR_EDIT START-->
+      <!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-    <EncoderProfile quality="high" fileFormat="mp4" duration="30">
+      -->
       <Video codec="h264"
              bitRate="20000000"
              width="1920"
              height="1080"
              frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
+      <!--VENDOR_EDIT END-->
 
       <Audio codec="aac"
              bitRate="156000"
@@ -506,10 +643,8 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- XingLong.Tang@PSW.MM.MediaServer.Cts.1356874, 2019/05/21, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
+    <!-- VENDOR_EDIT start -->
+    <!--
     <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="29400000"
@@ -535,7 +670,11 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
+    -->
+    <!-- VENDOR_EDIT end -->
 
+    <!-- Shield 4k 4096*2160 video size,fixing cts meida failed -->
+    <!--
     <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -548,7 +687,11 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
+    -->
 
+    <!--khursheed.ali@imaging, 2020/04/20, Remove UHD profile for front camera-->
+    <!--VENDOR_EDIT START-->
+    <!--
     <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="50000000"
@@ -561,6 +704,8 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
+    -->
+    <!--VENDOR_EDIT END-->
 
     <EncoderProfile quality="8kuhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -574,8 +719,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -619,23 +762,11 @@
     </EncoderProfile>
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- XingLong.Tang@PSW.MM.MediaServer.Cts.1356874, 2019/05/21, -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
@@ -742,10 +873,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- XingLong.Tang@PSW.MM.MediaServer.Cts.1356874, 2019/05/21, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="29400000"
@@ -753,6 +880,7 @@
              height="1440"
              frameRate="30" />
 
+      <!-- audio setting is ignored -->
       <Audio codec="aac"
              bitRate="156000"
              sampleRate="48000"
@@ -766,6 +894,7 @@
              height="1080"
              frameRate="30" />
 
+      <!-- audio setting is ignored -->
       <Audio codec="aac"
              bitRate="156000"
              sampleRate="48000"
@@ -810,8 +939,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
@@ -836,17 +963,10 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
-             frameRate="30" />
-
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
              frameRate="30" />
 
       <Audio codec="aac"
@@ -920,11 +1040,66 @@
              channels="2" />
     </EncoderProfile>
 
+    <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="29400000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <!-- Shield 4k 4096*2160 video size,fixing cts meida failed -->
+    <!--
+    <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="57500000"
+            width="4096"
+            height="2160"
+            frameRate="24" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+    -->
+
     <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="50000000"
             width="3840"
             height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="8kuhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="105000000"
+            width="7680"
+            height="4320"
             frameRate="30" />
 
       <Audio codec="aac"
@@ -974,17 +1149,10 @@
     </EncoderProfile>
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
-             frameRate="30" />
-
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
@@ -1093,11 +1261,65 @@
              channels="2" />
     </EncoderProfile>
 
+    <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="29400000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="57500000"
+            width="4096"
+            height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="50000000"
             width="3840"
             height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
+     <EncoderProfile quality="timelapse8kuhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="105000000"
+            width="7680"
+            height="4320"
             frameRate="30" />
 
       <Audio codec="aac"
@@ -1184,23 +1406,11 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- XingLong.Tang@PSW.MM.MediaServer.Cts.1356874, 2019/05/21, -->
-<!-- Modify for deleting 4K video recording -->
-<!--
       <Video codec="h264"
              bitRate="50000000"
              width="3840"
              height="2160"
              frameRate="30" />
--->
-<!-- #else  //OPLUS_BUG_COMPATIBILITY -->
-      <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
-             frameRate="30" />
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
       <Audio codec="aac"
              bitRate="156000"
@@ -1273,10 +1483,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- XingLong.Tang@PSW.MM.MediaServer.Cts.1356874, 2019/05/21, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="29400000"
@@ -1303,6 +1509,8 @@
              channels="2" />
     </EncoderProfile>
 
+    <!-- Shield 4k 4096*2160 video size,fixing cts meida failed -->
+    <!--
     <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -1315,6 +1523,7 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
+    -->
 
     <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -1341,8 +1550,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -1497,10 +1704,6 @@
              channels="2" />
     </EncoderProfile>
 
-<!-- #ifndef OPLUS_BUG_COMPATIBILITY -->
-<!-- XingLong.Tang@PSW.MM.MediaServer.Cts.1356874, 2019/05/21, -->
-<!-- Remove for deleting 4K video recording -->
-<!--
     <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="29400000"
@@ -1508,6 +1711,7 @@
              height="1440"
              frameRate="30" />
 
+      <!-- audio setting is ignored -->
       <Audio codec="aac"
              bitRate="156000"
              sampleRate="48000"
@@ -1521,6 +1725,7 @@
              height="1080"
              frameRate="30" />
 
+      <!-- audio setting is ignored -->
       <Audio codec="aac"
              bitRate="156000"
              sampleRate="48000"
@@ -1565,8 +1770,6 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
--->
-<!-- #endif //OPLUS_BUG_COMPATIBILITY -->
 
     <EncoderProfile quality="highspeed1080p" fileFormat="mp4" duration="30">
       <Video codec="h264"
