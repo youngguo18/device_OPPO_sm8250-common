@@ -828,7 +828,6 @@ odm/lib64/sensors.hal.tof.so
 odm/lib64/sensors.hal.tofcalib.so
 odm/lib64/vendor.oplus.hardware.cameraextension-V1-service-impl.so
 odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk_platform.so
-odm/lib64/vendor.oplus.hardware.orms@1.0.so
 odm/lib64/libOPAlgoCamFaceBeautyCap.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libextcamera_client.so
@@ -1311,6 +1310,27 @@ my_product/priv-app/HotwordEnrollmentXGoogle.apk:product/priv-app/HotwordEnrollm
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 
+# Iris
+odm/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
+odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service.rc
+odm/etc/vintf/manifest/vendor.pixelworks.hardware.display.iris-service.xml
+odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
+odm/lib64/libpwirisIoctlWrapper.so
+odm/lib64/libpwirisPCS.so
+odm/lib64/libpwiriscalibrate.so
+odm/lib64/libpwirisfeature.so;MODULE_SUFFIX=_odm
+odm/lib64/libpwirishalwrapper.so;MODULE_SUFFIX=_odm
+odm/lib64/libpwirispq.so
+odm/lib64/libpwirisservice.so
+odm/lib64/libpwirissoft.so
+odm/lib64/libpwsnapdragoncolor.so
+odm/lib64/libpwsoftirisPCS.so
+odm/lib64/vendor.pixelworks.hardware.display@1.0.so
+odm/lib64/vendor.pixelworks.hardware.display@1.1.so
+odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
+vendor/lib64/libpwirisfeature.so
+vendor/lib64/libpwirishalwrapper.so
+
 # IRQ balance
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
@@ -1441,6 +1461,20 @@ vendor/lib64/libOmxVpp.so
 vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libswvdec.so
 
+# orms
+odm/bin/hw/vendor.oplus.hardware.ormsHalService-aidl-service
+odm/bin/hw/vendor.oplus.hardware.ormsHalService-aidl-service
+odm/etc/init/ormsHalService-default.rc
+odm/etc/orms/orms_permission_config.xml
+-odm/etc/vintf/manifest/ormsHalService-default.xml
+odm/lib/vendor.oplus.hardware.orms.ormsHalService@1.0.so
+odm/lib/vendor.oplus.hardware.orms@1.0.so
+odm/lib/vendor.oplus.hardware.ormsHalService-V1-ndk_platform.so
+odm/lib64/libormshalclient.so
+odm/lib64/vendor.oplus.hardware.orms.ormsHalService@1.0.so
+odm/lib64/vendor.oplus.hardware.orms@1.0.so
+odm/lib64/vendor.oplus.hardware.ormsHalService-V1-ndk_platform.so
+
 # Osense
 odm/framework/vendor.oplus.hardware.osense.client-V1.0-java.jar
 odm/lib64/libosenseaidlhalclient.so
@@ -1448,6 +1482,12 @@ odm/lib64/libosensehalclient.so
 odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
 odm/lib64/vendor.oplus.hardware.osense.client@1.0.so
 vendor/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so
+
+# PASR
+vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
+vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
+vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
+vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 
 # Perf
 odm/lib/vendor.oplus.hardware.performance-V1-ndk_platform.so

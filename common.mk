@@ -372,6 +372,10 @@ PRODUCT_PACKAGES += \
     OPlusTetheringResCommon \
     WifiResTarget
 
+# Orms
+PRODUCT_PACKAGES += \
+    orms_core_config
+    
 # Partition
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
